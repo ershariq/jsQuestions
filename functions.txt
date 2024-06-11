@@ -1,0 +1,106 @@
+Que-1 Create a function using the "function" keyword that takes a string as an argument and returns the number of vowels in the string.
+Ans-
+
+function countVowels(str){
+  let count = 0;
+  for(const char of str){
+    if(char==="a" || char==="e" || char==="i" || char==="o" || char==="u"){
+      count++;
+    }
+  }
+    return count;
+}
+let result = countVowels("america is the powerfull country");
+console.log(result);
+
+Que-2 Create an arrow Function to perform the same task
+Ans-
+
+let countVowels = (str) =>{
+  let count = 0;
+  for(const char of str){
+    if(char==="a" || char==="e" || char==="i" || char==="o" || char==="u"){
+      count++;
+    }
+  }
+    return count;
+}
+let result = countVowels("america is the powerfull country");
+console.log(result);
+
+Que-3   For a given array of numbers, print the square of each value using the foreach loop.
+Ans-
+
+let numbers = [1,2,3,4,5,6,7,8];
+numbers.forEach((num)=>{
+  console.log(num * num);
+});
+
+Que-4 For a given array of numbers, print the new array using map function.
+Ans-
+
+let numbers = [1,2,3,4,5,6,7,8];
+let newArr = numbers.map((num)=>{
+  return num * num;
+});
+console.log(newArr);
+
+Que-5 Create a new array of elements that give true for a condition/filter like all even elements
+Ans-
+
+let numbers = [1,2,3,4,5,6,7,8];
+let evenArr = numbers.filter((num)=>{
+  return num % 2 == 0;
+});
+console.log(evenArr);
+
+Que-6 For a given array of number, find out the largest number.
+Ans- Whenever we have to find out one value in a result then always we use reduce function like
+
+let numbers = [1,2,3,45,4,65,25,8];
+let output = numbers.reduce((prev, curr)=>{
+  return prev > curr ? prev: curr;
+});
+console.log(output); 
+
+Que-7 We are given array of marks of students. filter out the marks of students that scored 90+.
+Ans-
+
+let marks = [100,20,36,94,95,67,87,98];
+let toppers = marks.filter((num)=>{
+  return num > 90;
+});
+console.log(toppers);
+
+Que-8 Take a Number n as input from user. create an array of numbers from 1 to n.
+      --> use the reduce method to calculate some of all numbers in the array. 
+	  --> Use the reduce method to calculate product(factorial) of all numbers in the array.
+
+     Ans-1
+
+	let n = 3;
+
+	let arr = [];
+
+	for (let i = 1; i <=n; i++) {
+	  arr[i-1]= i;
+	}
+	let result= arr.reduce((prev, curr)=>{
+	  return prev + curr;
+	})
+	console.log(result);
+	
+	Ans-2
+	
+	let n = 4;
+
+	let arr = [];
+
+	for (let i = 1; i <=n; i++) {
+	  arr[i-1]= i;
+	}
+	let result= arr.reduce((prev, curr)=>{
+	  return prev * curr;
+	})
+	console.log(result);
+
