@@ -100,6 +100,11 @@ Que-8 Take a Number n as input from user. create an array of numbers from 1 to n
 	  arr[i-1]= i;
 	}
 
+	let result= arr.reduce((prev, curr)=>{
+	  return prev * curr;
+	})
+	console.log(result);
+
 
 <!-- this script is using localStorage for popup come once on refresh -->
 <script>
@@ -126,8 +131,4 @@ Que-8 Take a Number n as input from user. create an array of numbers from 1 to n
     });
 
 </script>
-	let result= arr.reduce((prev, curr)=>{
-	  return prev * curr;
-	})
-	console.log(result);
 
