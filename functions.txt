@@ -99,6 +99,33 @@ Que-8 Take a Number n as input from user. create an array of numbers from 1 to n
 	for (let i = 1; i <=n; i++) {
 	  arr[i-1]= i;
 	}
+
+
+<!-- this script is using localStorage for popup come once on refresh -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const closePopupButton = document.getElementById('close');
+        const popup = document.querySelector('.blurBody');
+
+        if (!localStorage.getItem('popupShown')) {
+            setTimeout(() => {
+                popup.style.display = 'block';
+                localStorage.setItem('popupShown', 'true');
+            }, 5000);
+        }
+
+        closePopupButton.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    });
+
+</script>
 	let result= arr.reduce((prev, curr)=>{
 	  return prev * curr;
 	})
